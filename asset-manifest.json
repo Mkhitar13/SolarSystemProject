@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/SolarSystemProject/static/css/main.d9a21aba.css",
+    "main.js": "/SolarSystemProject/static/js/main.d0256d01.js",
+    "static/js/787.84be82c6.chunk.js": "/SolarSystemProject/static/js/787.84be82c6.chunk.js",
+    "static/media/imgOfArticlesAndResources5.png": "/SolarSystemProject/static/media/imgOfArticlesAndResources5.17e7bae9b3e542728fe0.png",
+    "static/media/imgForLicenseSection.png": "/SolarSystemProject/static/media/imgForLicenseSection.c0515d8a2782fcb7dfcf.png",
+    "static/media/imgforhome.png": "/SolarSystemProject/static/media/imgforhome.d509c6a991148d98d542.png",
+    "static/media/imagesForAbout-3.jpg": "/SolarSystemProject/static/media/imagesForAbout-3.067c783624c2c13c7972.jpg",
+    "static/media/imagesForAbout-4.jpg": "/SolarSystemProject/static/media/imagesForAbout-4.f7cdde9f3908b36ada64.jpg",
+    "static/media/imgOfOurAddresses.png": "/SolarSystemProject/static/media/imgOfOurAddresses.6d8a6c1797c613c6769d.png",
+    "static/media/imgOfArticlesAndResources1.png": "/SolarSystemProject/static/media/imgOfArticlesAndResources1.1617686b0f9a0f70e882.png",
+    "static/media/imgOfArticlesAndResources2.png": "/SolarSystemProject/static/media/imgOfArticlesAndResources2.24b0c19b76a477eca70a.png",
+    "static/media/imgOfArticlesAndResources3.png": "/SolarSystemProject/static/media/imgOfArticlesAndResources3.9dc9c828ea2558389fe9.png",
+    "static/media/imgOfArticlesAndResources4.png": "/SolarSystemProject/static/media/imgOfArticlesAndResources4.fc8aced33863f6696656.png",
+    "static/media/imagesForAbout-2.jpg": "/SolarSystemProject/static/media/imagesForAbout-2.8c114d0f8b40a5cead7d.jpg",
+    "static/media/sixthImgOfOurCommodity.png": "/SolarSystemProject/static/media/sixthImgOfOurCommodity.debace21cc12f6bde6cf.png",
+    "static/media/imagesForAbout-1.jpg": "/SolarSystemProject/static/media/imagesForAbout-1.ea2f9613306ae6645aa5.jpg",
+    "static/media/thirdImgOfOurCommodity.png": "/SolarSystemProject/static/media/thirdImgOfOurCommodity.ec2cbcadd8d5f1dfdfeb.png",
+    "static/media/fifthImgOfOurCommodity.png": "/SolarSystemProject/static/media/fifthImgOfOurCommodity.ac15ca610f9d9d374b1d.png",
+    "static/media/secondImgOfOurCommodity.png": "/SolarSystemProject/static/media/secondImgOfOurCommodity.b94ef7726100cf0ced1c.png",
+    "static/media/fourthImgOfOurCommodity.png": "/SolarSystemProject/static/media/fourthImgOfOurCommodity.2570d0ce3af63d46071a.png",
+    "static/media/firstImgOfOurCommodity.png": "/SolarSystemProject/static/media/firstImgOfOurCommodity.6d93a9cf39a0c7039931.png",
+    "static/media/iconOfPinterest.svg": "/SolarSystemProject/static/media/iconOfPinterest.7eec57c8df2270640e3aba4b2750e8c9.svg",
+    "static/media/iconOfYoutube.svg": "/SolarSystemProject/static/media/iconOfYoutube.866a5db197467214d51a1ecdbf70e1f0.svg",
+    "static/media/iconOfGoogle.svg": "/SolarSystemProject/static/media/iconOfGoogle.008a0d440a2ad6da68279e1127fa9263.svg",
+    "static/media/iconOfFacebook.svg": "/SolarSystemProject/static/media/iconOfFacebook.505d85313114d6a4347413a5ca43941d.svg",
+    "static/media/iconOfTwitch.svg": "/SolarSystemProject/static/media/iconOfTwitch.547a50b56c762e7fe0c4c69bf8183dc8.svg",
+    "index.html": "/SolarSystemProject/index.html",
+    "main.d9a21aba.css.map": "/SolarSystemProject/static/css/main.d9a21aba.css.map",
+    "main.d0256d01.js.map": "/SolarSystemProject/static/js/main.d0256d01.js.map",
+    "787.84be82c6.chunk.js.map": "/SolarSystemProject/static/js/787.84be82c6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d9a21aba.css",
+    "static/js/main.d0256d01.js"
+  ]
+}
