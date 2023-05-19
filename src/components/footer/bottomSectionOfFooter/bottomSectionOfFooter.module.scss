@@ -1,0 +1,71 @@
+@import "../../../scssVariables/variables.scss";
+
+#containerOfBottomSectionOfFooter {
+      width: 100%;
+      display: grid;
+      justify-items: center;
+
+      #nucleusContainerOfBottomSectionOfFooter {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            box-sizing: border-box;
+
+            #containerOfMailInBottomSectionOfFooter {
+                  display: flex;
+                  color: white;
+                  align-items: center;
+                  gap: 10px;
+                  font-size: 22px;
+            }
+
+            #containerOfIconsInBottomSectionOfFooter {
+                  display: flex;
+                  gap: 10px;
+                  align-items: center;
+
+                  .containerOfEachIconContainerInBottomSectionOfFooter {
+                        background: #3B4151;
+                        display: grid;
+                        cursor: pointer;
+                        border-radius: 5px;
+                        padding: 15px;
+                        box-sizing: border-box;
+                        transition: 2s;
+
+                        &:hover {
+                              background: $color_blue;
+                              transition: 2s;
+                        }
+                  }
+            }
+      }
+}
+
+@media screen and (max-width: 820px) {
+      #containerOfBottomSectionOfFooter {
+
+            #nucleusContainerOfBottomSectionOfFooter {
+                  display: grid;
+                  grid-template-columns: 1;
+                  justify-items: center;
+                  justify-content: center;
+                  // flex-wrap: wrap-reverse;
+            }
+      }
+}
+
+@media screen and (max-width: 390px) {
+      #containerOfBottomSectionOfFooter {
+
+            #nucleusContainerOfBottomSectionOfFooter {
+                  #containerOfIconsInBottomSectionOfFooter {
+
+                        .containerOfEachIconContainerInBottomSectionOfFooter {
+                              padding: 5px;
+                        }
+                  }
+            }
+      }
+}

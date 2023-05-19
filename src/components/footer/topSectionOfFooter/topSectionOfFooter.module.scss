@@ -1,0 +1,100 @@
+@import "../../../scssVariables//variables.scss";
+
+#TopSectionOfFooterContainer {
+      width: 100%;
+      display: grid;
+      place-items: center;
+
+      #nucleusContainerOfTopSectionOfFooter {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 35px;
+
+            #descriptionAndIconContainerInTopSectionOfFooter {
+
+                  #IconContainerInTopSectionOfFooter {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        #textByIcon {
+                              font-size: 50px;
+                              color: $color_texts;
+                              font-weight: 500;
+                        }
+                  }
+
+                  #descriptionInTopSectionOfFooter {
+                        color: $color_texts;
+                        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        font-size: 1.5em;
+                  }
+            }
+
+
+            #containerOfButtonsInTopSectionOfFooterContainer {
+                  display: flex;
+                  gap: 20px;
+
+                  #firstButtonInTopSectionOfFooterContainer {
+                        input {
+                              padding: 10px 45px;
+                              box-sizing: border-box;
+                              height: 70px;
+                              @include blueButton;
+                        }
+                  }
+
+                  #secondButtonInTopSectionOfFooterContainer {
+                        input {
+                              padding: 10px 45px;
+                              box-sizing: border-box;
+                              height: 70px;
+                              @include darkButton;
+                        }
+                  }
+            }
+      }
+}
+
+@media screen and (max-width: 1000px) {
+      #TopSectionOfFooterContainer {
+            #nucleusContainerOfTopSectionOfFooter {
+                  width: 95%;
+            }
+      }
+}
+
+@media screen and (max-width: 830px) {
+      #TopSectionOfFooterContainer {
+            #nucleusContainerOfTopSectionOfFooter {
+                  width: 95%;
+                  display: block;
+            }
+      }
+}
+
+@media screen and (max-width: 500px) {
+      #TopSectionOfFooterContainer {
+            #nucleusContainerOfTopSectionOfFooter {
+                  #descriptionAndIconContainerInTopSectionOfFooter {
+
+                        #descriptionInTopSectionOfFooter {
+                              font-size: 1.2em;
+                        }
+                  }
+
+                  #containerOfButtonsInTopSectionOfFooterContainer {
+                        display: grid;
+                        width: 100%;
+                        row-gap: 20px;
+
+                        input {
+                              width: 100%;
+                        }
+                  }
+            }
+      }
+}

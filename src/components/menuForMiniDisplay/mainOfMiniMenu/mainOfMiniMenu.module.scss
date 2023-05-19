@@ -1,0 +1,113 @@
+@import "../../../scssVariables/variables.scss";
+
+#containerOfMiniMenu {
+      background-color: $BG-color;
+      position: absolute;
+      top: 9%;
+      width: 100%;
+      transition: width 100% 1s;
+      height: auto;
+      min-height: 90vh;
+      align-content: space-between;
+      background-color: $BG-color;
+      padding-left: 20px;
+      box-sizing: border-box;
+      z-index: 300;
+
+      nav {
+            display: grid;
+            width: 100%;
+            height: auto;
+            line-height: 40px;
+            margin-top: 11vh;
+            box-sizing: border-box;
+
+            .linkContainerForMiniMenu {
+                  margin: 0;
+                  display: grid;
+                  column-gap: 10px;
+                  justify-content: start;
+                  // width: 15%;
+                  // height: auto;
+
+                  a {
+                        text-decoration: none;
+                        color: $color_texts;
+                        font-family: sans-serif;
+                        font-size: 28px;
+                        transition: 1s;
+                  }
+
+                  a:hover {
+                        transition: 1s;
+                        font-size: 23px;
+                        @include colorOfBlueSpan;
+                  }
+
+                  #iconForPages {
+                        display: grid;
+                        justify-self: start;
+                        width: 10px;
+                        height: 10px;
+                        margin-left: 5px;
+                        transition: 1s;
+                  }
+            }
+
+            .linkContainerForMiniMenu:hover>#iconForPages {
+                  transform: rotate(45deg);
+                  transition: 1s;
+                  cursor: pointer;
+            }
+
+            #pagesToggleForMiniMenu {
+                  display: grid;
+                  grid-template-columns: repeat(2, auto);
+                  height: auto;
+            }
+
+            #pagesSideInMiniMenu {
+                  div {
+                        position: static;
+                  }
+
+                  width: auto;
+                  height: auto;
+                  display: grid;
+                  justify-content: start !important;
+                  align-content: start !important;
+                  box-sizing: border-box;
+            }
+      }
+
+      #headerButtonForMiniMenu {
+            width: 90%;
+            height: auto;
+            display: grid;
+            align-content: end;
+            margin: 0 auto 5%;
+            transition: 0.3s;
+            box-sizing: border-box;
+
+            input {
+                  height: 50px;
+                  @include blueButton;
+            }
+      }
+
+      #headerButtonForMiniMenu:hover {
+            transition: 0.3s;
+            padding: 18px 8px;
+      }
+}
+
+
+@media screen and (max-width: 1150px) {
+      #containerOfMiniMenu {
+            nav {
+                  #cartOfLinks {
+                        display: none;
+                  }
+            }
+      }
+}

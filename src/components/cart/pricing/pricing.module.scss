@@ -1,0 +1,228 @@
+@import '../../../scssVariables/variables.scss';
+
+#containerOfPricingSection {
+      position: relative;
+      display: grid;
+      width: 100%;
+      min-height: 100vh;
+      background-color: $BG-color;
+      -webkit-text-size-adjust: 100%;
+      font-family: Rota, sans-serif;
+      line-height: 1.667em;
+      font-weight: 400;
+      box-sizing: border-box;
+      overflow: hidden;
+
+      #topCircleOfPricingSection {
+            position: absolute;
+            top: 14%;
+            right: 4%;
+            transform: rotate(90deg);
+            z-index: 20;
+      }
+
+      #bottomCircleOfPricingSection {
+            position: absolute;
+            transform: rotate(55deg);
+            bottom: 5%;
+            left: 13%;
+      }
+
+      #nucleusContainerOfPricingSection {
+            z-index: 2;
+            margin: 130px 0;
+            padding-bottom: 130px;
+            display: grid;
+            justify-items: center;
+
+            #mainTitleOfPricingSection {
+                  @include typeOfMainTitles;
+                  width: 80%;
+                  text-align: center;
+
+                  span {
+                        @include colorOfBlueSpan
+                  }
+            }
+
+            #blockesContainerOfPricingSection {
+                  width: 75%;
+                  display: grid;
+                  justify-items: end;
+                  grid-template-columns: repeat(3, 1fr);
+                  border: 1px solid #3b4151;
+                  border-radius: 6px;
+                  // overflow: hidden;
+
+                  .eachBlockContainerOfPricingSection {
+                        display: grid;
+                        row-gap: 20px;
+                        width: 100%;
+                        padding: 30px;
+                        box-sizing: border-box;
+                        font-family: Rota, sans-serif;
+                        border: 1px solid #3B4151;
+                        @include backgroundColorOfBoxes;
+                        color: $color_texts;
+
+                        position: relative;
+                        /* Set the position property to relative for perspective to work */
+                        perspective: 800px;
+                        /* Set the perspective property to create a 3D perspective effect */
+                        transform-style: preserve-3d;
+                        /* Set the transform-style property to preserve-3d to maintain the 3D effect */
+                        overflow: hidden;
+
+
+                        &:hover {
+                              cursor: help;
+                              transition: 1s;
+                              transform: rotate3d(1, 1, 1, -3deg) translate3d(0, 0, 0);
+                              transform: rotate(3deg) scale(1.1);
+                              box-shadow: -10px 10px 20px rgba(255, 255, 255, 0.1);
+                              opacity: 0.8;
+                              z-index: 2;
+                        }
+
+                        .topPeaceOfEachBlockContainerOfPricingSection {
+                              h3 {
+                                    font-size: 22px;
+                              }
+
+                              h2 {
+                                    font-size: 2em;
+                              }
+
+                              .buttonOfEachBlockContainerOfPricingSection {
+                                    margin: 20px 0;
+                                    width: 100%;
+                                    display: grid;
+                                    justify-items: center;
+
+                                    input {
+                                          text-align: center;
+                                          width: 100%;
+                                          height: 60px;
+                                          @include darkButton;
+                                    }
+
+
+                              }
+
+                              #middleButton input {
+                                    @include blueButton;
+                              }
+
+                        }
+
+                        .bottomPeaceOfEachBlockContainerOfPricingSection {
+                              display: grid;
+                              align-items: center;
+                              align-content: center;
+
+                              .iconAndPaymentOfPricingSection {
+                                    display: grid;
+                                    grid-template-columns: 20px calc(100% - 20px);
+                                    column-gap: 10px;
+
+                                    .iconOfPricingSection {
+                                          display: grid;
+                                          align-self: center;
+                                    }
+
+
+                                    .paymentOfPricingSection {
+                                          display: grid;
+                                          justify-self: start;
+                                    }
+                              }
+                        }
+                  }
+            }
+      }
+}
+
+
+@media screen and (max-width: 1400px) {
+      #containerOfPricingSection {
+            #topCircleOfPricingSection {
+                  top: 17%;
+                  right: -10%;
+            }
+
+            #bottomCircleOfPricingSection {
+                  position: absolute;
+                  transform: rotate(55deg);
+                  bottom: 5%;
+                  left: 4%;
+            }
+
+            #nucleusContainerOfPricingSection {
+                  #blockesContainerOfPricingSection {
+                        width: 90%;
+                  }
+            }
+      }
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+      #containerOfPricingSection {
+            #nucleusContainerOfPricingSection {
+                  #blockesContainerOfPricingSection {
+                        .eachBlockContainerOfPricingSection {
+                              .topPeaceOfEachBlockContainerOfPricingSection {
+                                    h2 {
+                                          font-size: 1.5em;
+                                    }
+                              }
+
+                              .bottomPeaceOfEachBlockContainerOfPricingSection {
+                                    h2 {
+                                          font-size: 1.3em;
+                                    }
+                              }
+                        }
+                  }
+            }
+      }
+}
+
+@media screen and (max-width: 835px) {
+      #containerOfPricingSection {
+            #topCircleOfPricingSection {
+                  top: 8%;
+                  right: -10%;
+            }
+
+            #nucleusContainerOfPricingSection {
+                  #blockesContainerOfPricingSection {
+                        grid-template-columns: repeat(1, 1fr);
+                        row-gap: 5px;
+                        border: 0;
+
+                        .eachBlockContainerOfPricingSection {
+                              border-radius: 10px;
+
+                              .topPeaceOfEachBlockContainerOfPricingSection {
+                                    h2 {
+                                          font-size: 1.5em;
+                                    }
+                              }
+                        }
+                  }
+            }
+      }
+}
+
+@media screen and (max-width: 688px) {
+      #containerOfPricingSection {
+            #nucleusContainerOfPricingSection {
+                  #mainTitleOfPricingSection {
+                        font-size: 2.5em;
+                  }
+            }
+      }
+}

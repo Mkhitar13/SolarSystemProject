@@ -1,0 +1,144 @@
+@import "../../../scssVariables/variables.scss";
+
+#containerOfMiddleSectionOfFooter {
+      width: 100%;
+      display: grid;
+      justify-items: center;
+
+      #nucleusContainerOfMiddleSectionOfFooter {
+            display: grid;
+            // grid-template-columns: repeat(auto-fit, 60% 300px);
+            grid-template-columns: 70% 30%;
+            justify-content: space-between;
+            width: 80%;
+            border-top: #3B4151 solid 1px;
+            border-bottom: #3B4151 solid 1px;
+            padding: 50px 0;
+
+            #leftSectionOfMiddleSectionOfFooter {
+                  display: grid;
+                  // grid-template-columns: repeat(auto-fit, 210px);
+                  grid-template-columns: 65% 35%;
+                  justify-content: space-evenly;
+                  box-sizing: border-box;
+
+                  #firstColumnOfMenuInMiddleSectionOfFooter {
+                        h2 {
+                              color: $color_texts;
+                              padding: 20px 0;
+                        }
+
+                        #listOfFirstSectionInMenuOfMiddleSectionOfFooter {
+                              display: grid;
+                              grid-template-columns: repeat(auto-fit, 210px);
+
+                              // grid-template-columns: repeat(auto-fit, minmax(30%, 200px));
+                              // grid-auto-flow: row dense;
+                              // overflow: auto;
+
+                              .containerOfLinksInlistOfFirstSection {
+                                    // width: 210px;
+                                    margin: 0;
+                                    padding: 0;
+
+                                    a {
+                                          font-family: Rota, sans-serif;
+                                          display: grid;
+                                          line-height: 35px;
+                                          color: #C8CCD5;
+                                          text-decoration: none;
+                                          font-size: 18px;
+                                    }
+
+                                    a:hover {
+                                          color: #2166FF;
+                                    }
+                              }
+                        }
+                  }
+
+                  #secondColumnOfMenuInMiddleSectionOfFooter {
+                        h2 {
+                              color: $color_texts;
+                              padding: 20px 0;
+                        }
+
+                        #listOfSecondSectionInMenuOfMiddleSectionOfFooter {
+                              width: 210px;
+
+                              a {
+                                    font-family: Rota, sans-serif;
+                                    line-height: 35px;
+                                    display: grid;
+                                    color: #C8CCD5;
+                                    text-decoration: none;
+                                    font-size: 18px;
+                              }
+
+                              a:hover {
+                                    color: #2166FF;
+                              }
+                        }
+                  }
+            }
+
+            #rightSectionOfMiddlePeaceOfFooter {
+                  #titleInRightSectionOfMiddlePeaceOfFooter {
+                        font-size: 1.8em;
+                        color: #C8CCD5;
+                        padding: 20px 0;
+                  }
+
+                  #textOfRightSectionInMiddleSectionOfFooter {
+                        color: #C8CCD5;
+                        padding: 20px 0;
+                  }
+
+                  #inputsContainerOfRightSectionInMiddleSectionOfFooter {
+                        display: grid;
+                        grid-template-columns: 1, 1fr;
+                        gap: 20px;
+
+                        #inputTextOfRightSectionInMiddleSectionOfFooter {
+                              @include darkButton;
+                              width: 270px;
+                              padding: 25px;
+
+                              &:hover {
+                                    border: 0;
+                                    opacity: 1;
+                              }
+
+                              &::placeholder {
+                                    color: #C8CCD5;
+                              }
+                        }
+
+                        #inputsButtonOfRightSectionInMiddleSectionOfFooter {
+                              @include blueButton;
+                              width: 150px;
+                              padding: 25px;
+                        }
+                  }
+            }
+      }
+}
+
+@media screen and (max-width: 1230px) {
+      #containerOfMiddleSectionOfFooter {
+            #nucleusContainerOfMiddleSectionOfFooter {
+                  width: 90%;
+                  grid-template-columns: 1fr;
+            }
+      }
+}
+
+@media screen and (max-width: 700px) {
+      #containerOfMiddleSectionOfFooter {
+            #nucleusContainerOfMiddleSectionOfFooter {
+                  #leftSectionOfMiddleSectionOfFooter {
+                        grid-template-columns: 1fr;
+                  }
+            }
+      }
+}

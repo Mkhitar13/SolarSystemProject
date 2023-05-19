@@ -1,0 +1,212 @@
+@import '../../../scssVariables/variables.scss';
+
+body {
+      margin: 0;
+      padding: 0;
+}
+
+img {
+      width: 100%;
+      height: 100%;
+}
+
+#parentCotainerOfOurCommodity {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      background-color: $BG-color;
+      padding-bottom: 50px;
+
+      #containerOfOurCommodity {
+            position: relative;
+            width: 100%;
+            display: grid;
+            place-items: center;
+            justify-content: center;
+            color: rgba(102, 117, 255, 0.7);
+
+            #circleOfOurCommodity {
+                  position: absolute;
+                  top: 5%;
+                  left: 3%;
+            }
+
+            #mainTitleOfOurCommodity {
+                  @include typeOfMainTitles;
+                  display: grid;
+                  text-align: center;
+                  width: 80%;
+                  font-size: 2em;
+
+                  span {
+                        @include colorOfBlueSpan;
+                  }
+            }
+
+            #containerOfAllItems {
+                  position: relative;
+                  width: 100%;
+                  display: grid;
+                  gap: 20px;
+                  justify-content: center;
+                  justify-items: center;
+                  grid-template-columns: repeat(3, 25%);
+                  padding-bottom: 50px;
+
+                  .containerOfEachItem {
+
+                        z-index: 2;
+                        border: solid 1.5px #3B4151;
+                        border-radius: 10px;
+
+                        .containerOfEachTitleAndText {
+                              h3 {
+                                    font-size: 20px;
+                              }
+
+                              min-height: 200px;
+                              height: auto;
+                              padding: 20px 40px;
+                              box-sizing: border-box;
+                              color: $color_texts;
+                              background: #1A2033;
+                        }
+                  }
+
+                  #borderBottomOfOurCommodityFirstLayer {
+                        animation: blink 4s infinite;
+                        z-index: 1;
+                        position: absolute;
+                        bottom: 0%;
+                        right: 7%;
+                  }
+            }
+
+            #containerOfOurCommodityButtons {
+                  width: 100%;
+                  display: grid;
+                  grid-template-columns: repeat(2, auto);
+                  place-items: center;
+                  justify-content: center;
+                  margin: 0 auto;
+                  text-align: center;
+                  column-gap: 10px;
+                  box-sizing: border-box;
+
+                  #firstButtonOfOurCommodity {
+                        @include blueButton;
+                        min-width: 200px;
+                        width: auto;
+                        height: 60px;
+
+                  }
+
+                  #secondButtonOfOurCommodity {
+                        @include darkButton;
+                        width: 250px;
+                        height: 60px;
+                  }
+
+                  #firstButtonOfOurCommodity:hover {
+                        border: 1px solid hsla(0, 0%, 100%, 0.6);
+                        opacity: 0.6;
+                        transition: 0.2s;
+                  }
+
+                  #secondButtonOfOurCommodity:hover {
+                        border: 1px solid hsla(0, 0%, 100%, 0.6);
+                        opacity: 0.5;
+                        transition: 0.2s;
+                  }
+            }
+      }
+}
+
+@media screen and (max-width: 1000px) {
+      #parentCotainerOfOurCommodity {
+            width: 100%;
+
+            #containerOfOurCommodity {
+                  width: 100%;
+
+                  #mainTitleOfOurCommodity {
+                        font-size: 1.2em;
+                        width: 100%;
+                  }
+
+                  #circleOfOurCommodity {
+                        display: none;
+                  }
+
+                  #containerOfAllItems {
+                        width: 90%;
+                        display: grid;
+                        gap: 20px;
+                        box-sizing: border-box;
+                        justify-content: space-evenly;
+                        grid-template-columns: repeat(2, 40%);
+
+                        .containerOfEachItem {
+                              display: grid;
+                              justify-content: center;
+                        }
+
+                        #borderBottomOfOurCommodityFirstLayer {
+                              right: 0%;
+                        }
+                  }
+            }
+      }
+}
+
+@media screen and (max-width: 600px) {
+      #parentCotainerOfOurCommodity {
+            width: 100%;
+
+            #containerOfOurCommodity {
+                  width: 100%;
+
+                  #containerOfAllItems {
+                        width: 90%;
+                        display: grid;
+                        row-gap: 40px;
+                        box-sizing: border-box;
+                        justify-content: center;
+                        grid-template-columns: repeat(1, 90%);
+
+                        .containerOfEachItem {
+                              display: grid;
+                              justify-content: center;
+                        }
+
+                        #borderBottomOfOurCommodityFirstLayer {
+                              bottom: 0%;
+                        }
+                  }
+
+                  #containerOfOurCommodityButtons {
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: repeat(1, auto);
+                        row-gap: 30px;
+                        place-self: center;
+
+                        #firstButtonOfOurCommodity {
+                              width: 90vw;
+                              height: 60px;
+                              display: grid;
+                              place-self: center;
+                              align-content: center;
+                        }
+
+                        #secondButtonOfOurCommodity {
+                              width: 90vw;
+                              height: 60px;
+                              display: grid;
+                              place-self: center;
+                              align-content: center;
+                        }
+                  }
+            }
+      }
+}

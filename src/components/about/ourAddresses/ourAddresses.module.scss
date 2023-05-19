@@ -1,0 +1,115 @@
+@import "../../../scssVariables/variables.scss";
+
+#containerOfOurAddresses {
+      margin: 0;
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      background-color: $BG-color;
+      display: grid;
+      grid-template-columns: 60% 30%;
+      place-items: center;
+      box-sizing: border-box;
+
+      #mainTitleOfOurAddresses {
+            font-size: 2.5em;
+            font-family: sans-serif;
+
+            span {
+                  font-family: Arial, sans-serif;
+                  @include colorOfBlueSpan;
+            }
+      }
+
+      #containerForLeftSectionMainTitleAndAllBlockes {
+            display: grid;
+            color: $color_texts;
+
+            #containerForAllStateInformation {
+                  display: grid;
+                  place-items: start;
+                  gap: 40px;
+                  grid-template-columns: repeat(2, 50%);
+
+                  .containerForEachBlockOfInformation {
+                        h3 {
+                              @include typeOfMainTitles;
+                              font-size: 2em;
+                        }
+
+                        .containerForEachIconAndText {
+                              display: grid;
+                              justify-content: start;
+                              grid-column: 5px;
+                              grid-template-columns: repeat(2, auto);
+                              column-gap: 5px;
+
+
+                              span {
+                                    width: auto;
+                                    display: grid;
+                                    justify-self: start;
+                                    align-content: center;
+                                    line-height: 40px;
+                              }
+                        }
+                  }
+            }
+      }
+
+      #containerForRightSection {
+            height: 90vh;
+            position: absolute;
+            right: 0;
+            top: 0;
+      }
+}
+
+@media screen and (max-width: 1100px) {
+      #containerOfOurAddresses {
+            position: relative;
+            overflow: hidden;
+
+            #containerForRightSection {
+                  width: 85%;
+                  right: -100px;
+            }
+      }
+}
+
+@media screen and (max-width: 930px) {
+      #containerOfOurAddresses {
+            grid-template-columns: repeat(1, 70%);
+            place-items: start;
+            padding: 50px 30px;
+            box-sizing: border-box;
+
+            #mainTitleOfOurAddresses {
+                  font-size: 1.5em;
+            }
+
+            #containerForLeftSectionMainTitleAndAllBlockes {
+                  display: grid;
+                  color: $color_texts;
+
+                  #containerForAllStateInformation {
+                        grid-template-columns: repeat(1, 100%);
+
+                        .containerForEachBlockOfInformation {
+                              h3 {
+                                    font-size: 1em;
+                              }
+                        }
+                  }
+            }
+
+            #containerForRightSection {
+
+                  width: 65%;
+                  height: 50vh;
+                  top: 25%;
+                  // right: 0;
+                  // transform: translate(-20% 0);
+            }
+      }
+}

@@ -1,0 +1,220 @@
+@import "../../../scssVariables/variables.scss";
+
+img {
+      width: 100%;
+      height: 100%;
+}
+
+#containerOfFilterSectionOfServices {
+      display: grid;
+      margin: 0;
+      width: 100%;
+      min-height: 100vh;
+      background-color: $BG-color;
+      justify-items: center;
+      box-sizing: border-box;
+      padding-bottom: 200px;
+
+      #nucleusContainerOfFilterSectionOfServices {
+            position: relative;
+            width: 70%;
+            display: grid;
+            justify-items: center;
+            margin-top: 170px;
+            box-sizing: border-box;
+
+            #sectionOfTitleAndFilterButtons {
+                  width: 100%;
+                  display: flex;
+                  justify-content: space-between;
+
+                  h2 {
+                        margin: 0%;
+                        @include typeOfMainTitles;
+                        width: 100%;
+                        font-size: 2.5em;
+
+                  }
+
+                  #sectionOfFilterButtons {
+                        width: 100%;
+                        display: flex;
+                        justify-content: end;
+                        column-gap: 10px;
+                        box-sizing: border-box;
+                        flex-wrap: wrap;
+
+                        .eachInputContainer {
+                              display: grid;
+                              justify-self: end;
+                              justify-content: end;
+                              justify-items: end;
+
+                              input {
+                                    @include darkButton;
+                                    display: grid;
+                                    justify-self: end;
+                                    padding: 20px 30px;
+                                    box-sizing: border-box;
+
+                              }
+
+                              .active {
+                                    @include blueButton;
+                              }
+
+                              cursor: pointer;
+                        }
+                  }
+            }
+
+            #containerOfBlockes {
+                  width: 100%;
+                  margin: 100px 0;
+                  display: grid;
+                  grid-template-columns: repeat(2, 48%);
+                  gap: 4%;
+                  box-sizing: border-box;
+
+                  .containerOfEachBlock {
+                        z-index: 2;
+                        border: #3B4151 2px solid;
+                        border-radius: 5px;
+                        color: $color_texts;
+                        box-sizing: border-box;
+                        overflow: hidden;
+
+
+                        &:hover {
+                              opacity: 0.6 !important;
+                              cursor: pointer;
+                              border: 0;
+                              transition: 0.6s;
+                        }
+
+                        .containerOfEachImg {
+                              margin: 0%;
+                              height: 400px;
+                        }
+
+                        .informationSectionOfEachBlock {
+                              margin: 0;
+                              padding: 50px;
+                              box-sizing: content-box;
+                              @include backgroundColorOfBoxes;
+
+
+                              h3 {
+                                    box-sizing: content-box;
+                                    font-size: 23px;
+                                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                              }
+
+                              hr {
+                                    border-style: #3B4151;
+                                    margin: 30px 0;
+                              }
+
+                              .typeAndDateOfInformationSection {
+                                    display: grid;
+                                    grid-template-columns: repeat(2, auto);
+                                    align-content: center;
+                                    justify-content: space-between;
+                                    padding-bottom: 30px;
+
+                                    .typeOfInformationSection {
+                                          border: 1px solid #3B4151;
+                                          border-radius: 50px;
+                                          padding: 10px 20px;
+                                          background: #3B4151;
+                                    }
+
+                                    .dateOfInformationSection {
+                                          display: grid;
+                                          justify-self: end;
+                                          align-self: center;
+                                    }
+                              }
+                        }
+                  }
+            }
+
+            #HalfSquareOfFilterSectionOfServices {
+                  position: absolute;
+                  bottom: 0%;
+                  left: -5%;
+                  transform: rotate(90deg);
+                  z-index: 1;
+            }
+      }
+}
+
+@media screen and (max-width: 1350px) {
+      #containerOfFilterSectionOfServices {
+            #nucleusContainerOfFilterSectionOfServices {
+                  width: 90%;
+
+                  #HalfSquareOfFilterSectionOfServices {
+                        left: -3%;
+                  }
+            }
+      }
+}
+
+@media screen and (max-width: 1000px) {
+      #containerOfFilterSectionOfServices {
+            #nucleusContainerOfFilterSectionOfServices {
+                  padding-bottom: 100px;
+
+                  #sectionOfTitleAndFilterButtons {
+                        display: block;
+
+                        #sectionOfFilterButtons {
+                              justify-content: start;
+                              column-gap: 10px;
+
+
+                              .eachInputContainer {
+                                    input {
+                                          box-sizing: border-box;
+                                          margin: 20px 0;
+                                          justify-self: center;
+                                    }
+                              }
+                        }
+                  }
+
+                  #containerOfBlockes {
+                        grid-template-columns: repeat(1, 100%);
+                        gap: 1%;
+                  }
+
+                  #HalfSquareOfFilterSectionOfServices {
+                        bottom: 3%;
+                  }
+            }
+      }
+}
+
+@media screen and (max-width: 724px) {
+      #containerOfFilterSectionOfServices {
+            #nucleusContainerOfFilterSectionOfServices {
+                  #sectionOfTitleAndFilterButtons {
+                        margin: 20px 0;
+                        box-sizing: border-box;
+
+                        .sectionOfFilterButtons {
+                              justify-self: start;
+                        }
+                  }
+
+                  #containerOfBlockes {
+                        .containerOfEachBlock {
+                              .informationSectionOfEachBlock {
+                                    padding: 10px;
+                              }
+                        }
+                  }
+            }
+      }
+}

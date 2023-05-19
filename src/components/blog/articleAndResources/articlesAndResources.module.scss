@@ -1,0 +1,269 @@
+@import "../../../scssVariables//variables.scss";
+
+body {
+      margin: 0;
+      padding: 0;
+}
+
+img {
+      width: 100%;
+      height: 100%;
+}
+
+#sectionOfArticlesAndResources {
+      margin: 0;
+      padding: 5% 0;
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background-color: $BG-color;
+
+      #topCircleOfArticlesAndResources {
+            z-index: 1;
+            position: absolute;
+            top: 10%;
+            left: 8%;
+      }
+
+      #bottomCircleOfArticlesAndResources {
+            z-index: 1;
+            position: absolute;
+            bottom: 5%;
+            right: 7%;
+            transform: rotate(175deg);
+      }
+
+      #nucleusOfArticlesAndResources {
+            z-index: 2;
+            display: grid;
+            justify-content: center;
+            align-items: start;
+            margin-top: 100px;
+            width: 70%;
+            column-gap: 20px;
+            row-gap: 0px;
+
+            #mainTitleAndDescription {
+                  display: grid;
+                  grid-template-columns: repeat(2, 1fr);
+                  grid-area: mainTitleAndDescription;
+
+                  #mainTitle {
+                        color: $color_texts;
+                        font-size: 3.5em;
+                        font-family: sans-serif;
+
+                        span {
+                              @include colorOfBlueSpan;
+                        }
+                  }
+
+                  #description {
+                        display: grid;
+                        align-self: center;
+                        color: $color_texts;
+                  }
+            }
+
+            .containerOfEachBlock {
+                  margin: 0;
+                  display: grid;
+                  align-content: stretch;
+                  align-items: stretch;
+                  grid-template-columns: repeat(2, auto);
+                  column-gap: 10px;
+                  align-items: center;
+
+                  .containerOfEachImg {
+                        width: 220px;
+                        border-radius: 3%;
+                        overflow: hidden;
+
+                        img {
+                              transition: 2s;
+                        }
+                  }
+
+                  h5 {
+
+                        align-items: start;
+                        width: 100%;
+                        color: $color_texts;
+                        font-weight: 500;
+                  }
+
+                  p {
+                        display: none;
+                  }
+
+                  &:hover {
+                        cursor: pointer;
+                        opacity: 0.6;
+                        transition: 0.5s;
+
+                        h5 {
+                              -webkit-background-clip: text;
+                              -webkit-text-fill-color: transparent;
+                              background-image: linear-gradient(90deg, #1e6aff, #3a36ff);
+                              background-clip: text;
+                        }
+                  }
+
+                  &:hover>.containerOfEachImg>img {
+                        cursor: pointer;
+                        transform: scale(1.1);
+                        opacity: 0.6;
+                        transition: 0.5s;
+                        margin: 0 auto;
+                  }
+
+
+            }
+
+            #activeBlock {
+                  min-width: 500px;
+                  display: grid;
+                  grid-template-columns: repeat(1, auto);
+                  gap: 20px;
+
+                  .containerOfEachImg {
+                        width: 100%;
+                        height: 400px;
+                  }
+
+                  h5 {
+                        display: grid;
+                        align-self: start;
+                        place-self: start;
+                        color: $color_texts;
+                        margin: 0;
+                        font-size: 2em;
+                  }
+
+                  p {
+                        display: grid;
+                        color: $color_texts;
+                  }
+            }
+
+            .block1 {
+                  grid-area: block1;
+            }
+
+            .block2 {
+                  grid-area: block2;
+            }
+
+            .block3 {
+                  grid-area: block3;
+            }
+
+            .block4 {
+                  grid-area: block4;
+            }
+
+            .block5 {
+                  grid-area: block5;
+            }
+      }
+}
+
+@media screen and (max-width: 1300px) {
+      #sectionOfArticlesAndResources {
+            overflow: hidden;
+
+            #topCircleOfArticlesAndResources {
+                  left: -5%;
+            }
+
+            #bottomCircleOfArticlesAndResources {
+                  right: -5%;
+            }
+
+
+            #nucleusOfArticlesAndResources {
+                  width: 95%;
+            }
+      }
+}
+
+@media screen and (max-width: 1000px) {
+      #sectionOfArticlesAndResources {
+            #nucleusOfArticlesAndResources {
+                  #mainTitle {
+                        font-size: 2em;
+                  }
+
+                  #activeBlock {
+                        width: 100%;
+
+                        .containerOfEachImg {
+                              height: 250px;
+                        }
+                  }
+            }
+      }
+}
+
+@media screen and (max-width: 700px) {
+      #sectionOfArticlesAndResources {
+            #topCircleOfArticlesAndResources {
+                  top: 0%;
+                  left: 50%;
+                  transform: translate(0% -50%);
+                  transform: rotate(45deg);
+            }
+
+            #bottomCircleOfArticlesAndResources {
+                  bottom: 0%;
+                  right: -15%;
+                  transform: rotate(175deg);
+            }
+
+            #nucleusOfArticlesAndResources {
+                  place-items: center;
+                  margin: 20% 0;
+                  gap: 0;
+
+                  #mainTitleAndDescription {
+                        grid-template-columns: repeat(1, 1fr);
+                        text-align: center;
+
+                        #mainTitle {
+                              font-size: 2.5em;
+                        }
+                  }
+
+                  .containerOfEachBlock {
+                        justify-content: center;
+                        width: 90%;
+                  }
+
+                  #activeBlock {
+                        margin: 0 auto;
+                        min-width: 90%;
+                        place-items: center;
+
+                        h5 {
+                              width: 90%;
+                              font-size: 1.5em;
+                              align-self: center;
+                              place-self: center;
+                              text-align: center;
+                        }
+
+                        p {
+                              width: 90%;
+                              text-align: center;
+                        }
+
+                        .containerOfEachImg {
+                              height: 250px;
+                              margin: 0%;
+                        }
+                  }
+            }
+      }
+}

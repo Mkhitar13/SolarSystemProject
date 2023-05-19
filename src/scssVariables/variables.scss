@@ -1,0 +1,66 @@
+$BG-color: #181D2B;
+$bg_gradient_last_color: rgba(0, 212, 255, 1);
+$bg_gradient: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(52, 9, 121, 1) 37%, $bg_gradient_last_color 94%);
+$color_blue: linear-gradient(90deg, #1e6aff, #3a36ff);
+$color_texts: #d3d6df;
+
+@mixin blueButton {
+      background-image: -webkit-gradient(linear, left top, right top, from(#1e6aff), to(#3a36ff));
+      color: $color_texts;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      box-sizing: border-box;
+      transition: 0.4s;
+      color: #C8CCD5;
+      font-size: 20px;
+      font-family: bold;
+
+      &:hover {
+            border: 1px solid $color_texts;
+            opacity: 0.6;
+            transition: 0.4s;
+            box-sizing: border-box;
+      }
+}
+
+@mixin darkButton {
+      background: #252C41;
+      color: $color_texts;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      box-sizing: border-box;
+      transition: 0.4s;
+      color: #C8CCD5;
+      font-size: 20px;
+      font-family: bold;
+
+      &:hover {
+            border: 1px solid $color_texts;
+            opacity: 0.6;
+            transition: 0.4s;
+            opacity: 0.5;
+            box-sizing: border-box;
+      }
+}
+
+@mixin colorOfBlueSpan {
+      background: $color_blue;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+}
+
+@mixin typeOfMainTitles {
+      color: $color_texts;
+      margin-top: 0;
+      font-size: 3.5em;
+      line-height: 1.5em;
+      font-weight: 500;
+}
+
+@mixin backgroundColorOfBoxes {
+      background-image: linear-gradient(180deg, #262e43, #191f31);
+      box-shadow: 0 2px 7px 0 rgba(20, 20, 43, 0.04);
+}

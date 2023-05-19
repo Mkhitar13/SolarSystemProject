@@ -1,0 +1,213 @@
+@import '../../scssVariables/variables.scss';
+
+#headerContainer {
+      position: relative;
+      position: absolute;
+      display: grid;
+      align-content: center;
+      width: 100%;
+      height: 10vh;
+      z-index: 100;
+      background-color: inherit;
+      // opacity: 0.5;
+
+      #header {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 25% 35% 25%;
+            align-items: center;
+            justify-content: space-between;
+
+            #headerIconContainer {
+                  display: grid;
+                  justify-content: start;
+                  place-self: center;
+                  grid-template-columns: repeat(2, 100%);
+                  cursor: pointer;
+
+                  &:hover {
+                        opacity: 0.7;
+                        transition: 0.3s;
+                        padding: 18px 8px;
+                        cursor: pointer;
+                  }
+
+                  #icon {
+                        size: 100px;
+                        display: grid;
+                        justify-content: end;
+                        margin-right: 10px;
+                  }
+
+                  #textByIcon {
+                        display: grid;
+                        align-content: end;
+                        font-size: 25px;
+                        font-weight: 999;
+                        color: $color_texts;
+                  }
+            }
+
+
+            nav {
+                  display: grid;
+                  grid-template-columns: repeat(6, 16%);
+                  justify-content: space-between;
+                  align-items: center;
+                  width: 100%;
+                  height: 70px;
+                  color: $color_texts;
+
+                  .linkContainer {
+                        place-self: center;
+
+                        a {
+                              transition: 1s;
+                              text-decoration: none;
+                              color: rgb(255, 255, 255);
+                              font-family: sans-serif;
+                              font-size: 17px;
+
+                              &:hover {
+                                    @include colorOfBlueSpan;
+                                    transition: 1s;
+                                    font-size: 19px;
+                              }
+                        }
+
+                        .active {
+                              @include colorOfBlueSpan;
+                              font-family: bold;
+                              font-size: 25px;
+                        }
+                  }
+
+                  #iconForPages {
+                        margin-left: 5px;
+                        transition: 1s;
+                  }
+            }
+
+            #pages {
+                  display: grid;
+                  gap: 2px;
+                  grid-template-columns: repeat(2, auto);
+                  align-items: center;
+                  align-content: center;
+
+                  p {
+                        display: grid;
+                        place-self: center;
+
+                  }
+            }
+      }
+
+      #headerButtonAndMiniButtonOfMenuAndCartSection {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            margin-right: 50px;
+            align-items: center;
+
+            #cartSectionForMiniDisplay {
+                  display: none;
+                  margin: 0 10px;
+                  color: $color_texts;
+
+                  a {
+                        text-decoration: none;
+                        color: $color_texts;
+                  }
+            }
+
+            #headerButton {
+                  display: grid;
+                  place-items: center;
+                  margin: 0 15px;
+
+                  button {
+                        @include blueButton;
+
+                        width: 150px;
+                        height: 50px;
+                        display: grid;
+                        place-self: center;
+                        align-content: center;
+                        align-items: center;
+                  }
+            }
+
+
+            #menuForMiniDisplay {
+                  display: none;
+                  color: $color_texts;
+            }
+      }
+}
+
+
+@media screen and (max-width: 1150px) {
+
+      #headerContainer {
+            align-items: center;
+
+            #header {
+                  display: flex;
+                  justify-content: space-between;
+
+                  nav {
+                        display: none;
+                  }
+
+                  #headerButtonAndMiniButtonOfMenuAndCartSection {
+                        #cartSectionForMiniDisplay {
+                              display: grid;
+                              place-self: center;
+                        }
+
+                        #menuForMiniDisplay {
+                              display: grid;
+                              place-self: center;
+                        }
+
+                        #pages {
+                              display: block;
+                        }
+                  }
+            }
+      }
+}
+
+@media screen and (max-width: 700px) {
+      #headerContainer {
+
+            #header {
+                  // display: flex;
+                  // // grid-template-columns: auto auto;
+                  // justify-content: space-between;
+
+                  #pages {
+                        display: grid;
+                        gap: 0px;
+                  }
+
+                  nav {
+                        display: none;
+                  }
+
+                  #headerButtonAndMiniButtonOfMenuAndCartSection {
+                        #cartSectionForMiniDisplay {
+                              display: flex;
+                        }
+
+                        #menuForMiniDisplay {
+                              display: flex;
+                        }
+
+                        #headerButton {
+                              display: none;
+                        }
+                  }
+            }
+      }
+}

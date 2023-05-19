@@ -1,0 +1,198 @@
+@import "../../../scssVariables/variables.scss";
+
+#containerOfAboutOurEmployees {
+      box-sizing: content-box;
+      position: relative;
+      display: grid;
+      place-items: center;
+      margin: 0;
+      width: 100%;
+      min-height: 100vh;
+      background: $BG-color;
+      padding: 200px 0;
+
+      #containerOfTitlesInAboutOurEmployees {
+            text-align: center;
+            color: $color_texts;
+
+            h2 {
+                  @include typeOfMainTitles;
+                  font-size: 3rem;
+                  line-height: 50px;
+
+                  span {
+                        @include colorOfBlueSpan;
+                  }
+            }
+      }
+
+      #containerAllEmployeeBlocks {
+            width: 70%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2em;
+            box-sizing: border-box;
+
+            #containerOfEachEmployeeBlock {
+                  z-index: 2;
+                  box-sizing: border-box;
+                  width: 100%;
+                  display: grid;
+                  grid-template-areas:
+                        "containerAboutImgNameAndProfession containerAboutImgNameAndProfession containerAboutImgNameAndProfession containerOfIconForPerson"
+                        "eachPersonalDescription eachPersonalDescription eachPersonalDescription eachPersonalDescription";
+                  grid-template-columns: 65% 15%;
+                  justify-content: space-between;
+                  border: 1px rgb(87, 86, 86) solid;
+                  border-radius: 10px;
+                  padding: 20px;
+                  @include backgroundColorOfBoxes;
+
+                  &:hover {
+                        cursor: pointer;
+                        transform: matrix3d(1.04, 0.2, 0, 0, -0.2, 1.04, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+                        transition: transform 0.2s ease-in-out;
+                  }
+
+                  #containerAboutImgNameAndProfession {
+                        width: 100%;
+                        grid-area: containerAboutImgNameAndProfession;
+                        display: grid;
+                        grid-template-columns: auto 60%;
+                        gap: 10px;
+                        justify-content: start;
+                        justify-self: start;
+
+                        #containerOfEachEmployeeImg {
+                              border-radius: 5px;
+                              display: grid;
+                              width: 100px;
+                              height: 100px;
+                              overflow: hidden;
+                        }
+
+                        #containerAboutFullnameAndProfession {
+                              display: grid;
+                              color: $color_texts;
+                              align-self: start;
+                              justify-self: start;
+                              align-content: start;
+
+                              h4,
+                              p {
+                                    margin: 0;
+                                    display: grid;
+                                    align-self: start;
+                                    align-content: start;
+                                    box-sizing: border-box;
+                              }
+
+                              #fullnameOfEmployee {
+                                    font-family: 'Courier New', monospace, bold;
+                                    display: grid;
+                                    column-gap: 5px;
+                                    grid-template-columns: auto 1fr;
+                                    font-size: 22px;
+
+                                    span {
+                                          display: grid;
+                                          align-self: start;
+                                          display: grid;
+                                          justify-self: start;
+                                    }
+                              }
+
+                              #profesionOfEmployee {
+                                    font-size: 18px;
+                                    margin-top: 15px;
+                              }
+                        }
+                  }
+
+                  #containerOfIconForPerson {
+                        grid-area: containerOfIconForPerson;
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        column-gap: 5px;
+                        justify-self: end;
+                  }
+
+                  #eachPersonalDescription {
+                        grid-area: eachPersonalDescription;
+                        width: 100%;
+                        color: $color_texts;
+                        font-size: 18px;
+                  }
+            }
+      }
+
+      #bottomButtonOfAboutOurEmployees input {
+            z-index: 2;
+            margin-top: 70px;
+            width: 200px;
+            height: 60px;
+            @include blueButton;
+      }
+
+      #bottomCircleOfAboutOurEmployees {
+            box-sizing: content-box;
+            z-index: 1;
+
+            div {
+                  // position: absolute;
+                  bottom: 10%;
+                  right: 7%;
+                  transform: rotate(210deg);
+                  box-sizing: content-box;
+            }
+      }
+}
+
+@media screen and (max-width: 1500px) {
+      #containerOfAboutOurEmployees {
+            overflow: hidden;
+
+            #containerAllEmployeeBlocks {
+                  width: 90%;
+            }
+
+            #bottomCircleOfAboutOurEmployees {
+                  overflow: hidden;
+
+                  div {
+                        right: -5%;
+                  }
+            }
+      }
+}
+
+@media screen and (max-width: 1100px) {
+      #containerOfAboutOurEmployees {
+
+            #containerAllEmployeeBlocks {
+                  grid-template-columns: repeat(1, auto);
+            }
+      }
+}
+
+
+@media screen and (max-width: 600px) {
+      #containerOfAboutOurEmployees {
+            #containerAllEmployeeBlocks {
+                  #containerOfEachEmployeeBlock {
+                        grid-template-areas:
+                              "containerAboutImgNameAndProfession"
+                              "containerOfIconForPerson"
+                              "eachPersonalDescription";
+                        grid-template-columns: repeat(1, 100%);
+                        // grid-template-rows: 10px;
+                        gap: 0;
+
+                        #containerOfIconForPerson {
+                              justify-self: start;
+                              padding: 20px 0;
+                        }
+                  }
+            }
+      }
+}
