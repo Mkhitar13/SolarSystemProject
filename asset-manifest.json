@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/SolarSystemProject/static/css/main.548559fb.css",
+    "main.css": "/SolarSystemProject/static/css/main.949b41de.css",
     "main.js": "/SolarSystemProject/static/js/main.8f75ceb4.js",
     "static/js/787.84be82c6.chunk.js": "/SolarSystemProject/static/js/787.84be82c6.chunk.js",
     "static/media/imgOfArticlesAndResources5.png": "/SolarSystemProject/static/media/imgOfArticlesAndResources5.17e7bae9b3e542728fe0.png",
@@ -27,12 +27,12 @@
     "static/media/iconOfFacebook.svg": "/SolarSystemProject/static/media/iconOfFacebook.505d85313114d6a4347413a5ca43941d.svg",
     "static/media/iconOfTwitch.svg": "/SolarSystemProject/static/media/iconOfTwitch.547a50b56c762e7fe0c4c69bf8183dc8.svg",
     "index.html": "/SolarSystemProject/index.html",
-    "main.548559fb.css.map": "/SolarSystemProject/static/css/main.548559fb.css.map",
+    "main.949b41de.css.map": "/SolarSystemProject/static/css/main.949b41de.css.map",
     "main.8f75ceb4.js.map": "/SolarSystemProject/static/js/main.8f75ceb4.js.map",
     "787.84be82c6.chunk.js.map": "/SolarSystemProject/static/js/787.84be82c6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.548559fb.css",
+    "static/css/main.949b41de.css",
     "static/js/main.8f75ceb4.js"
   ]
 }
