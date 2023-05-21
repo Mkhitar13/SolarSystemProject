@@ -119,9 +119,9 @@ const Header = ({
                                     </div>
 
                                     <div className={stylesOfHeader.linkContainer}>
-                                          <Link onClick={() => { activeLinkFunction("link5"); clickOnTheLinkCart() }}
-
+                                          <Link
                                                 className={activeLink == "link5" ? stylesOfHeader.active : ""}
+                                                onClick={() => { activeLinkFunction("link5"); clickOnTheLinkCart() }}
                                           >
                                                 <span id={stylesOfHeader.cartLink}>Cart(
                                                       <span
@@ -135,7 +135,10 @@ const Header = ({
 
                               <div id={stylesOfHeader.headerButtonAndMiniButtonOfMenuAndCartSection}>
 
-                                    <div id={stylesOfHeader.cartSectionForMiniDisplay}>
+                                    <div
+                                          id={stylesOfHeader.cartSectionForMiniDisplay}
+                                          onClick={() => { activeLinkFunction("link5"); clickOnTheLinkCart() }}
+                                    >
                                           <Link>Cart(<span
                                                 style={{ color: activeLink == "link5" ? '#d3d6df' : 'blue' }}
                                           >O</span>)

@@ -70,7 +70,8 @@ const MainOfMiniMenu = ({ toggleMiniMenuState, toggleMiniMenuFunction }) => {
                         <div className={styles.linkContainerForMiniMenu} id={styles.cartOfLinks}>
                               <Link
                                     onClick={() => toggleMiniMenuFunction(true)}
-                                    to="/cart">Cart( <span style={{ color: '#d3d6df' }}>O</span> )</Link>
+                                    to="/cart">Cart( <span style={{ color: '#d3d6df' }}>O</span> )
+                              </Link>
                         </div>
                   </nav>
                   <div id={styles.headerButtonForMiniMenu}>
