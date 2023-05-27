@@ -88,8 +88,6 @@ const FilterSectionOfServices = () => {
 
             setActiveButton(buttonName);
 
-            console.log(e, buttonName);
-
             if (e.target.value === "All") {
                   setArr(originalArr);
             } else {

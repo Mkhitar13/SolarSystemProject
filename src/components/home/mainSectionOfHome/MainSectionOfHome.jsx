@@ -80,17 +80,20 @@ const MainSectionOfHome = () => {
                                     viewport={{ once: true }}
                               >
                                     <motion.button
+                                          id={styles.firstButtonOfHome}
                                           initial="hidden"
                                           whileInView="visible"
                                           variants={animationForLeftSection}
                                           custom={1.7}
-                                          id={styles.firstButtonOfHome}>Contact Us</motion.button>
+                                          viewport={{ once: true }}
+                                    >Contact Us</motion.button>
                                     <motion.button
+                                          id={styles.secondButtonOfHome}
                                           initial="hidden"
                                           whileInView="visible"
                                           variants={animationForLeftSection}
                                           custom={1.9}
-                                          id={styles.secondButtonOfHome}
+                                          viewport={{ once: true }}
                                     >Our Services</motion.button>
                               </div>
                         </div >

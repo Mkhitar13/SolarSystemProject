@@ -10,8 +10,6 @@ import { motion } from "framer-motion";
 
 const AboutOurEmployees = () => {
 
-      const [chooseItem,] = useState(1);
-
       const animationForAboutOurEmployees = {
             hidden: {
                   y: -250,

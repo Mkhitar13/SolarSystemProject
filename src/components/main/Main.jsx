@@ -1,9 +1,8 @@
+
 import stylesOfMain from "./main.module.scss";
 import Pages from "../pages/Pages";
 import MainOfMiniMenu from "../menuForMiniDisplay/mainOfMiniMenu/MainOfMiniMenu";
 import AlertCartSection from "../cart/alertCart/AlertCartSection";
-import AnimatedRoutes from "../animation/AnimatedRoutes";
-
 import { ButtonOfRegistration } from '../buttonOfRegistration/ButtonOfRegistration';
 
 const Main = ({
@@ -49,7 +48,6 @@ const Main = ({
                               functionClickOnTheCartLink={functionClickOnTheCartLink}
                         />
                   </div>
-                  <AnimatedRoutes />
                   <ButtonOfRegistration />
             </section>
       )
