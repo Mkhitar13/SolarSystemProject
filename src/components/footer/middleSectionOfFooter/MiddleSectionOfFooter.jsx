@@ -1,7 +1,12 @@
 import stylesOfMiddleSectionOfFooter from "./middleSectionOfFooter.module.scss";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 const MiddleSectionOfFooter = () => {
+
+      const handleRouteChange = (route) => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return <Navigate to={route} replace />;
+      };
 
       return (
             <section id={stylesOfMiddleSectionOfFooter.containerOfMiddleSectionOfFooter}>
@@ -12,22 +17,22 @@ const MiddleSectionOfFooter = () => {
                                     <h2>Pages</h2>
                                     <div id={stylesOfMiddleSectionOfFooter.listOfFirstSectionInMenuOfMiddleSectionOfFooter}>
                                           <p className={stylesOfMiddleSectionOfFooter.containerOfLinksInlistOfFirstSection}>
-                                                <Link to="/Home">Home</Link>
-                                                <Link to="/about">About</Link>
-                                                <Link to="/pages">Pages</Link>
-                                                <Link to="/services">Services</Link>
-                                                <Link to="/Home">Case Studies</Link>
+                                                <Link onClick={() => handleRouteChange('/home')} to="/home">Home</Link>
+                                                <Link onClick={() => handleRouteChange('/about')} to="/about">About</Link>
+                                                <Link onClick={() => handleRouteChange('/blog')} to="/blog">Pages</Link>
+                                                <Link onClick={() => handleRouteChange('/services')} to="/services">Services</Link>
+                                                <Link onClick={() => handleRouteChange('/home')} to="/home">Case Studies</Link>
                                           </p>
                                           <p className={stylesOfMiddleSectionOfFooter.containerOfLinksInlistOfFirstSection}>
-                                                <Link to="/blog">Blog</Link>
-                                                <Link to="/Home">Case Study Single</Link>
-                                                <Link to="/Home">Blog Post</Link>
+                                                <Link onClick={() => handleRouteChange('/blog')} to="/blog">Blog</Link>
+                                                <Link onClick={() => handleRouteChange('/home')} to="/home">Case Study Single</Link>
+                                                <Link onClick={() => handleRouteChange('/home')} to="/home">Blog Post</Link>
                                           </p>
                                           <p className={stylesOfMiddleSectionOfFooter.containerOfLinksInlistOfFirstSection}>
-                                                <Link to="/Home">Careers</Link>
-                                                <Link to="/Home">Careers Single</Link>
-                                                <Link to="/Home">Pricing</Link>
-                                                <Link to="/Home">Pricing Single</Link>
+                                                <Link onClick={() => handleRouteChange('/home')} to="/home">Careers</Link>
+                                                <Link onClick={() => handleRouteChange('/home')} to="/home">Careers Single</Link>
+                                                <Link onClick={() => handleRouteChange('/home')} to="/home">Pricing</Link>
+                                                <Link onClick={() => handleRouteChange('/home')} to="/home">Pricing Single</Link>
                                           </p>
                                     </div>
                               </div>
